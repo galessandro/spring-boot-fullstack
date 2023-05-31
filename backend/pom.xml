@@ -12,14 +12,13 @@
     <groupId>com.granados</groupId>
     <artifactId>ggranados-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <organization>
-        <name>ggranados</name>
-        <url>https://galessandro.com</url>
-    </organization>
 
     <properties>
         <java.version>17</java.version>
         <docker.username>galessandro</docker.username>
+        <docker.image.name>ggranados-api</docker.image.name>
+        <docker.image.tag/>
+
     </properties>
 
     <dependencies>
@@ -172,20 +171,20 @@
                         </platforms>
                     </from>
                     <to>
-                        <image>docker.io/${docker.username}/${project.artifactId}:${project.version}</image>
+                        <image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
                         <tags>
                             <tag>latest</tag>
                         </tags>
                     </to>
                 </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
             </plugin>
         </plugins>
     </build>
