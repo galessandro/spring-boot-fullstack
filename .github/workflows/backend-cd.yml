@@ -55,7 +55,7 @@ jobs:
         run: >
           curl -X POST -H 'Content-type: application/json'
           --data '
-            {"text":"Building with Maven :maven:}
+            {"text":"Building with Maven :maven:"}
           '
           ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Build Package Push with Maven
