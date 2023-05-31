@@ -1,0 +1,23 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "ggranados-api",
+      "image": "galessandro/ggranados-api:latest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ],
+      "environment": [
+        {
+          "name": "SPRING_DATASOURCE_URL",
+          "value": "jdbc:postgresql://awseb-e-ph44px9mmt-stack-awsebrdsdatabase-toujz3ymxny0.cmzcmchuc6rc.us-east-2.rds.amazonaws.com:5432/customer"
+        }
+      ]
+    }
+  ]
+}
