@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "ggranados-api",
-      "image": "galessandro/ggranados-api:latest",
+      "image": "galessandro/ggranados-api:31.05.2023.21.44.00",
       "essential": true,
       "memory": 512,
       "portMappings": [
