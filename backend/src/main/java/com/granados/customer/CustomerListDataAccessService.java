@@ -1,6 +1,5 @@
 package com.granados.customer;
 
-import jakarta.el.MethodNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -13,8 +12,8 @@ public class CustomerListDataAccessService implements CustomerDAO {
 
     static {
         customers = new ArrayList<Customer>();
-        Customer german = new Customer(1, "German", "german@gmail.com", 39);
-        Customer mateo = new Customer(2, "Mateo", "mateo@gmail.com", 12);
+        Customer german = new Customer(1, "German", "german@gmail.com", 39, Gender.MALE);
+        Customer mateo = new Customer(2, "Mateo", "mateo@gmail.com", 12, Gender.MALE);
         customers.add(german);
         customers.add(mateo);
     }

@@ -34,8 +34,8 @@ class CustomerRepositoryTest extends AbstractTestcontainers{
         Customer customer = new Customer(
                 FAKER.name().fullName(),
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.save(customer);
         //when
         var actual = underTest.existsCustomerByEmail(email);
@@ -60,8 +60,8 @@ class CustomerRepositoryTest extends AbstractTestcontainers{
         Customer customer = new Customer(
                 FAKER.name().fullName(),
                 email,
-                20
-        );
+                20,
+                Gender.MALE);
         underTest.save(customer);
 
         Integer id = underTest.findAll()
