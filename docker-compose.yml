@@ -8,11 +8,11 @@ services:
       POSTGRES_DB: customer
       PGDATA: /data/postgres
     volumes:
-      - dbs:/data/postgres
+      - db-d:/data/postgres
     ports:
       - "5432:5432"
     networks:
-      - dbs
+      - db-n
     restart: unless-stopped
   ggranados-api:
     container_name: ggranados-api
@@ -22,15 +22,15 @@ services:
     ports:
       - "8088:8080"
     networks:
-      - dbs
+      - db-n
     depends_on:
       - db
     restart: unless-stopped
 #    command:
 #      - --spring.datasource.url=jdbc.postgresql://db:5432/customer
 networks:
-  dbs:
+  db-n:
     driver: bridge
 
 volumes:
-  dbs:
+  db-d:
